@@ -1,0 +1,66 @@
+\documentclass[12pt]{article}
+\usepackage{amsmath,amsthm,amsfonts, latexsym, amssymb}
+\usepackage{graphicx}
+
+\theoremstyle{definition}
+\newtheorem{prob}{Problem}
+\newtheorem{theorem}{Theorem}
+
+\def\rr{\mathbb{R}}
+\def\cc{\mathbb{C}}
+\def\zz{\mathbb{Z}}
+\def\qq{\mathbb{Q}}
+\def\nn{\mathbb{N}}
+\def\aa{\mathbb{A}}
+\def\pp{\mathcal{P}}
+\def\ff{\mathfrak{F}}
+
+\setlength{\textheight}{9in} \setlength{\textwidth}{6.0in}
+\setlength{\topmargin}{0.0in} \setlength{\headheight}{0.0in}
+\setlength{\headsep}{0.0in} \setlength{\leftmargin}{0.0in}
+\setlength{\oddsidemargin}{0.0in} \setlength{\parindent}{1pc}
+\textwidth 6.5truein
+\textheight 9truein
+
+\newcounter{probparts}
+\newenvironment{parts}
+    {\begin{list}
+        {(\alph{probparts})}
+        {\setlength{\itemindent}{0cm}
+        \setlength{\leftmargin}{.9cm}
+        \setlength{\labelsep}{.2cm}
+        \setlength{\labelwidth}{.7cm}
+        \setlength{\listparindent}{0cm}
+        \usecounter{probparts}}}
+    {\end{list}}
+
+\newenvironment{tightcenter}{%
+  \setlength\topsep{0pt}
+  \setlength\parskip{0pt}
+  \begin{center}
+}{%
+  \end{center}
+}
+
+\begin{document}
+\pagestyle{empty}
+
+\flushleft
+
+
+\textbf{Tung Phan \hfill MATH291 - F Session \hfill 4/23/2014}
+
+\vspace{4ex}
+
+\begin{theorem}
+Suppose $(P, w)$ contains $(Q, w')$ as a convex subposet. If $(Q, w')$ has multiplicity, then so does $(P,w)$.
+\end{theorem}
+
+\begin{proof}
+Let $L_{(Q,w')}$ be the set of all linear extensions of $(Q,w')$.\\
+Since $(Q,w')$ has multiplicity, there exist $l_1, l_2 \in L_{(Q,w')}$ such that they have the same $F$ function. \\
+\textit{Case 1:} Every labeled node in $(P,w)$ belongs in $(Q,w')$ and thus, $(P,w) = (Q,w')$. Hence, $l_1, l_2 \in L_{(P,w)}$ and $(P,w)$ has multiplicity.\\
+\textit{Case 2:} There exists labeled node(s) in $(P,w)$ that don't belong in $(Q,w')$. 
+
+\end{proof}
+\end{document}
